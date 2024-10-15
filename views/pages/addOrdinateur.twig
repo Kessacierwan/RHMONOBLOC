@@ -1,0 +1,46 @@
+{% extends "../layouts/base.twig" %}
+
+{% block title %}
+	<title>Page d'ajout d'ordinateurs</title>
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="/assets/css/addOrdinateur.css">
+{% endblock %}
+
+{% block main %}
+<main>
+	<h2>Page d'ajout d'ordinateurs</h2>
+
+	<p>Je suis dans le if</p>
+
+	<form action="/addOrdinateur" method="POST">
+		<div>
+			<label for="marque">Marque</label>
+			<input type="text" name="marque" value="{{ordinateur.marque}}" class="input-field">
+		</div>
+
+		<div>
+			<label for="modele">Modèle</label>
+			<input type="text" name="modele" value="{{ordinateur.modele}}" class="input-field">
+		</div>
+
+		<div>
+			<label for="employeList">Liste des employés</label><br>
+			<select name="employeList" id="employeList" class="input-field">
+				<option value="">Sélectionnez votre employé</option>
+				{% for employe in employes %}
+					<option value="{{employe.id}}">
+						{{employe.prenom}}
+						{{ employe.nom}}
+					</option>
+				{% endfor %}
+			</select>
+		</div>
+
+		<div>
+			<button class="loginButton">Ajouter Ordi</button>
+		</div>
+	</form>
+</main>
+{% endblock %}

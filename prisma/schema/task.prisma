@@ -1,0 +1,13 @@
+model Task {
+
+id Int @id @default(autoincrement())
+title String
+content String
+
+  employeId Int
+  employe Employe @relation(fields: [employeId], references: [id])
+
+  
+  isValid  Boolean @default(false) 
+
+}

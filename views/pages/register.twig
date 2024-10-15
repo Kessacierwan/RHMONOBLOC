@@ -1,0 +1,62 @@
+{% extends "../layouts/base.twig" %}
+
+{% block title %}
+	<title>{{title}}</title>
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="/assets/css/register.css">
+<link rel="stylesheet" href="/assets/css/modifyEmploye.css">
+
+
+{% endblock %}
+
+{% block main %}
+	<main>
+				<div>
+								<h1>Page d'inscription</h2>
+
+					<form action="/register" method="post">
+						<div>
+							<label for="name">Nom de l'entreprise</label>
+							<input type="text" name="name" id="name">
+						</div>
+
+                        <div>
+                            <label for="siret">Siret</label>
+                            <input type="text" name="siret" id="siret">
+                        </div>
+
+						<div>
+							<label for="mail">Mail</label>
+							<input type="text" name="mail" id="mail">
+						</div>
+
+                        <div>
+							<label for="director">Directeur</label>
+							<input type="text" name="director" id="director">
+						</div>
+
+						<div>
+							<label for="password">Mot de passe</label>
+							<input type="password" name="password" id="password">
+						</div>
+
+						<div>
+							<label for="confirm_password">Confirmez le mot de passe</label>
+							<input type="password" name="confirm_password" id="confirm_password">
+</div>
+						<button class="loginButton">Envoyer</button>
+
+						{% if error %}
+							<p>{{error.confirm_password}}</p>
+						{% endif %}
+					</form>
+				</div>
+	</main>
+{% endblock %}
+
+
+
+
+

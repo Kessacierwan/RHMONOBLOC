@@ -1,0 +1,24 @@
+{% extends "../layouts/base.twig" %}
+
+{% block style %}
+<link rel="stylesheet" href="/assets/css/addEmploye.css">
+{% endblock %}
+
+{% block main %}
+<main>
+    <h2 class="addTaskTitle">Page d'ajout de taches</h2>
+    <form action="/addTask/{{ employe }}" method="post">
+        <div>
+            <label for="title">Titre de la tache</label>
+            <input type="text" name="title" class="input-field">
+        </div>
+
+        <div>
+            <label for="content">Contenu de la tache</label>
+            <input type="text" name="content" class="input-field">
+        </div>
+
+        <button class="loginButton" id="addTaskSendButton">Envoyer</button>
+    </form>
+</main>
+{% endblock %}

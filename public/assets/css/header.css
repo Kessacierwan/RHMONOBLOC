@@ -1,0 +1,114 @@
+.accueilLoginButton{
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    padding: 5px;
+    border: 5Px solid white;
+    margin-top: 10px;
+
+}
+
+.spanMainTitle {
+  font-size: 60px;
+  margin-left: -8px;
+  color: white;
+}
+.accueilLoginButton:hover{
+  background-color:#7bff9c ;
+}
+
+.accueilRegisterButton{
+    color:white;
+    background-color: black;
+    border: 5Px solid white;
+    border-radius: 10px;
+    padding: 5px;   
+    margin-top: 10px;
+
+}
+
+.accueilRegisterButton:hover{
+  background-color:#7bff9c ;
+}
+
+
+#deconnexionButton{
+  color:white;
+  background-color: black;
+  border: 5Px solid white;
+  border-radius: 10px;
+  padding: 5px; 
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+#deconnexionButton:hover{
+  background-color:#7bff9c ;
+
+}
+
+.accueilLoginButton, .accueilRegisterButton, #deconnexionButton {
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+    list-style: none;
+    flex-direction: space-between;
+  }
+
+
+
+  .divPourFlex{
+    display: flex;
+    position: relative;
+align-items: center;  }
+
+  nav ul{
+    list-style: none;
+  }
+
+  .nav {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .divPourFlex {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav ul {
+    list-style: none;
+  }
+  .nav li {
+    display: inline-block;
+  }
+
+  .divDuHeader{
+    background-color: rgb(0, 0, 0);
+    margin: -8px;
+  }
+
+  .mainTitle{
+    margin-left: 10px;
+    margin-top: 3%;
+    color: white;
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  .logoIMG{
+width: 120px;
+background-color: white;
+
+  }
+
+  .divDuHeaderLogoTitle{
+    display: flex;
+  }
+
+  
+
+  
+
+
+
+  

@@ -1,0 +1,50 @@
+{% extends "../layouts/base.twig" %}
+
+{% block style %}
+<link rel="stylesheet" href="/assets/css/addEmploye.css">
+{% endblock %}
+
+{% block title %}
+	<title>Page d'ajout d'employé</title>
+{% endblock %}
+
+{% block main %}
+<form  action="/addEmploye" method="POST">
+
+    <div class="addEmployeDiv">
+    <h2> page d'ajout d'employé </h2> 
+
+        <div>
+    <label for="nom">Nom</label><br>
+<input type="text" name="nom">
+</div>
+
+<div>
+    <label for="prenom">prenom</label><br>
+<input type="text" name="prenom">
+</div>
+
+<div>
+    <label for="motDePasse">password</label><br>
+<input type="password" name="motDePasse">
+</div>
+
+<div>
+    <label for="age">Age</label><br>
+<input type="number" name="age">
+</div>
+
+<div>
+    <label for="sexe">Sexe</label><br>
+    <select id="sexe" name="sexe">
+        <option value="homme">Homme</option>
+        <option value="femme">Femme</option>
+    </select>
+</div>
+
+<div>
+<button class="addEmployeeButton">Ajouter employé</button>
+</div>
+</form>
+
+{% endblock %}

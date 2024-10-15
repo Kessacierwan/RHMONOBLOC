@@ -1,0 +1,38 @@
+{% extends "../layouts/base.twig" %}
+
+{% block title %}
+<title>Login</title>
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="/assets/css/login.css">
+{% endblock %}
+
+{% block main %}
+<main>
+    <section>
+        <div>
+            <h2>Page de connexion</h2>
+        </div>
+        <div>
+            <form action="/login" method="post">
+                <div>
+                    <label for="mail">Votre mail</label>
+                    <input type="email" name="mail">
+                    {% if error %}
+                    {{error.mail}}
+                    {% endif %}
+                </div>
+                <div></div>
+                    <label for="password">Votre mot de passe</label>
+                    <input type="password" name="password">
+                    {% if error %}
+                    {{error.password}}
+                    {% endif %}
+                </div>
+                <button class="loginButton">Se connecter</button>
+            </form>
+        </div>
+    </section>
+</main>
+{% endblock %}

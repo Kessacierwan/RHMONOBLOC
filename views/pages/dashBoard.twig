@@ -1,0 +1,175 @@
+{% extends "../layouts/base.twig" %}
+
+{% block style %}
+	<link rel="stylesheet" href="/assets/css/style.css">
+{% endblock %}
+
+{% block main %}
+	<div class="container">
+		<a href=""></a>
+		{% if entreprise %}
+
+			<h1>
+				<p>Bienvenue entreprise :
+					{{ entreprise.name }}</p>
+						<p>Patron :
+					{{ entreprise.director }}</p>
+			</h1>
+			<br>
+			<div class="justPourFlex">
+				<h2 class="ListDesEmployé">Liste des employés</h2>
+				<a href="/addEmploye" id="addEmployeButton" class="buttonsClass">Ajouter un Employé</a>
+			</div>
+			<h1>Informations de l'employé</h1>
+
+			{% for employe in employes %}
+				<div class="divDesEmployés">
+					<ul>
+						<li>
+
+							<H2 class="NomPrenomEmployeTitle">
+								{{ employe.nom }}
+								{{ employe.prenom }}</h2>
+						</li>
+						<li>
+							<span>id</span>
+							: employé
+							{{employe.id}}</li>
+
+						<li>
+							<span>Age</span>
+							:
+							{{ employe.age }}</li>
+						<li>
+							<span>Sexe</span>
+							:
+							{{ employe.sexe }}</li>
+					</ul>
+					<section class="flexMyFeatures">
+						<a class="modifyEmployeButton" href="/modifyEmploye/{{employe.id}}">Modifier employé</a><br>
+						<a class="deleteEmployeButton" href="/deleteEmploye/{{employe.id}}">Supprimer employé</a><br>
+					</section>
+					<a href="/addTask/{{employe.id}}" class="addTaskButton">Ajouter une tache</a>
+
+					<button class="ClickAfficherTask">
+						afficher les taches
+					</button>
+
+					<div class="AfficherEmployeTask">
+						{% for task in tasks %}
+							{% if task.employeId == employe.id %}
+								<div class="task">
+								{% if task.isValid == false%}
+									<h2>{{ task.title }}</h2>
+									<p>{{ task.content }}</p>
+									{% else %}
+									<h2>{{ task.title }} (validée) </h2>
+									<p>{{ task.content }}</p>
+						{% endif %}
+								</div>
+								<div class="flexMyTrucs">
+									<a href="/deleteTask/{{task.id}}" class="addTaskButton">Supprimer l'objectif</a><br>
+									<a href="/updateTask/{{task.id}}" class="addTaskButton">Valider l'objectif</a><br>
+								</div>
+							{% endif %}
+
+
+						{% endfor %}
+					</div>
+
+				</div>
+			{% endfor %}
+			<div class="justPourFlex">
+				<h2 class="ListDesEmployé">Ordinateurs de l'entreprise </h2>
+				<a href="/addOrdinateur" id="addCPUButton" class="buttonsClass">Ajouter un ordinateur</a>
+			</div>
+			{% for ordinateur in ordinateurs %}
+				<div class="divDesOrdi">
+					<ul>
+						<li>
+							<h2>ordinateur{{ ordinateur.id}}</H2>
+						</li>
+
+						<li>
+							<span>Marque</span>
+							:
+							{{ ordinateur.marque }}</li>
+
+						<li>
+							<span>Modèle</span>
+							:
+							{{ ordinateur.modele }}</li>
+
+						{% if ordinateur.employeId %}
+							<li>
+								<span>Utilisateur associé</span>
+								:
+								{% for employe in employes %}
+
+									{# lecture du tableau d'employé de l'entreprise, comparer son ID avec l'employéId assigné a l'ordi actuel, une fois trouvé , suite du if  #}
+									{% if employe.id == ordinateur.employeId %}
+										{{ employe.prenom }}
+										{{ employe.nom }}
+									{% endif %}
+
+								{% endfor %}
+							</li>
+
+						{% else %}
+							<section class="flexMyFeatures">
+								<a href="/addOrdinateur/{{ordinateur.id}}" class="associateEmployeButton">Associer un employé</a><br>
+							{% endif %}
+							<a class="deleteEmployeButton" id="deleteEmployeButtonId" href="/deleteOrdinateur/{{ordinateur.id}}">Supprimer ordinateur</a>
+						</section>
+						<img src="/assets/images/OrdinateurLOGO.png" class="ordinateurLogo" alt="">
+					</ul>
+				</div>
+			{% endfor %}
+		{% endif %}
+	</div>
+
+	<div class="flexBarreDeProgression">
+		<h3 class="BarreDeProgressionTitle">
+			Barre de progression des taches :
+			{% if progress == NaN %}
+0%
+			{% else %}
+			{{progress|round}}
+			%
+			{% endif %}
+
+		</h3>
+		<div class="progressContainer">
+			<div
+				class="bar">
+
+				{# comme value mais caché sur l'élément HTML , accessible grace a .dataset en js #}
+				<div class="progress-value" data-progress={{progress}}></div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
+
+{% block script %}
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+const progressContainer = document.querySelector(".progressContainer");
+
+let progressValueBar = document.querySelector(".progress-value").dataset.progress;
+progressContainer.style.setProperty("--progressContainer", `${progressValueBar}%`);
+console.log(progressValueBar)
+
+});
+
+
+let ClickAfficherTasks = document.querySelectorAll(".ClickAfficherTask");
+let AfficherEmployeTasks = document.querySelectorAll(".AfficherEmployeTask");
+
+ClickAfficherTasks.forEach((ClickAfficherTask, index) => {
+ClickAfficherTask.addEventListener("click", () => {
+AfficherEmployeTasks[index].style.display = AfficherEmployeTasks[index].style.display === "block" ? "none" : "block";
+});
+});
+	</script>
+{% endblock %}

@@ -1,0 +1,13 @@
+model Entreprise {
+  id          Int          @id @default(autoincrement())
+  name String 
+  siret       String       @unique
+  mail String @unique
+  director String
+  password  String
+  createdAt DateTime @default(now())
+
+
+  ordinateurs Ordinateur[]
+  employes Employe[]
+}

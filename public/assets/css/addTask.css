@@ -1,0 +1,86 @@
+
+
+
+/* Global styles */
+body {
+    background-color: #484848;
+
+  }
+
+  *{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  }
+  
+  main {
+    position: relative;
+    top:20px;
+    max-width: 400px;
+    
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #c9c7c7; /* white background */
+    border: 1px solid #dddddd; /* light gray border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+    border-radius: 5px;
+  }
+  
+  h2 {
+    color: #007732; /* green title */
+    margin-top: 0;
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: #007732; /* dark gray label */
+    text-align: center;
+    font-size : 20px
+  }
+  
+  input[type="email"], input[type="password"] {
+    width: 94%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #cccccc; /* light gray border */
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 8%;
+  }
+  
+  input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #007732; /* green border on focus */
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.5); /* green glow */
+  }
+  
+  button[type="submit"] {
+    background-color: #007732; /* green button */
+    color: #ffffff; /* white text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+
+
+  .loginButton {
+    background-color: #000000; /* darker green on hover */
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    border: 5Px solid white;
+
+    display: block; /* make the button a block element */
+    margin: 0 auto; /* center the button horizontally */
+  }
+
+
+
+  .loginButton:hover {
+background-color: #7bff9c;
+cursor: pointer;
+
+  }

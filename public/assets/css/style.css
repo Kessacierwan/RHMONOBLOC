@@ -1,0 +1,306 @@
+  *{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  }
+body {
+  
+background: linear-gradient(0deg,black,gray);  }
+  
+  .container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #c9c7c7;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  ul, a {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 20px;
+    text-decoration: none;
+
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  .divDesOrdi {
+    background-color: #dffffd;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    
+  }
+.divDesOrdi h2{
+  font-size:25px;
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+}
+  button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+  
+
+  
+ .associateEmployeButton {
+    background-color: black;
+    color: white;
+    border: 5Px solid white;
+
+    border-radius: 10px;
+    padding: 5px;
+    height: 20px;
+    margin-top: 10px;
+  }
+
+  .associateEmployeButton:hover{
+    background-color: #0088ff;
+    text-decoration: none;
+
+
+  }
+  
+.ClickAfficherTask{
+  margin-left: 2%;
+  background-color: black;
+  color: white;
+  border: 5Px solid white;
+  font-size: 15Px;
+
+  border-radius: 10px;
+  padding: 5px;
+  height: 20px;
+  margin-top: 10px;
+  width :19% ;
+  height: 10%;
+
+}
+
+.ClickAfficherTask:hover{
+  background-color:rgb(206, 255, 132)
+
+}
+
+.divDesEmployés{
+    background-color: #72e876;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+.buttonsClass{
+  position: relative;
+    background-color: black;
+    color: white;
+    border: 5Px solid white;
+
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
+
+.justPourFlex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Répartit les éléments horizontalement */
+
+}
+
+span{
+  color: red;
+  font-style: bold;
+}
+
+
+
+.buttonsClass:hover {
+  background-color:#7bff9c ;
+
+  text-decoration: none; /* remove underline on hover */
+}
+
+.ListDesEmployé{
+    font-size: 35px;
+    color:rgb(21, 91, 2)
+}
+
+.entrepriseLogo,.ordinateurLogo{
+    width: 75px;
+    height: 75px;
+}
+
+.divDesEmployés {
+    position: relative; /* Add this to create a containing block */
+}
+
+.entrepriseLogo {
+    position: absolute; /* Take the image out of the normal flow */
+    top: 50%; /* Move the image to the middle vertically */
+    right: 10%; /* Move the image to the right edge */
+    transform: translateY(-50%); /* Adjust the image to be centered vertically */
+}
+
+.divDesOrdi {
+    position: relative; /* Add this to create a containing block */
+}
+
+.ordinateurLogo {
+    position: absolute; /* Take the image out of the normal flow */
+    top: 50%; /* Move the image to the middle vertically */
+    right: 10%; /* Move the image to the right edge */
+    transform: translateY(-50%); /* Adjust the image to be centered vertically */
+}
+
+.addTaskButton{
+  color:white;
+  background-color: black;
+  border: 5Px solid white;
+  border-radius: 10px;
+  padding: 5px; 
+  text-decoration: none;
+  margin-top: 10px;
+
+}
+
+.addTaskButton:hover{
+  text-decoration: none;
+
+  background-color:rgb(206, 255, 132)
+}
+.deleteEmployeButton{
+  color:white;
+  background-color: black;
+  border: 5Px solid white;
+  border-radius: 10px;
+  padding: 5px; 
+  text-decoration: none;
+  margin-top: 10px;
+
+}
+
+#deleteEmployeButtonId{
+  margin-left: -1%;
+}
+
+.deleteEmployeButton:hover{
+  background-color:rgb(255, 0, 0);
+  text-decoration: none;
+
+}
+
+.modifyEmployeButton{
+  color:white;
+  background-color: black;
+  border: 5Px solid white;
+  border-radius: 10px;
+  padding: 5px; 
+  text-decoration: none;
+  margin-top: 10px;
+
+}
+.modifyEmployeButton:hover{
+  background-color:rgb(0, 0, 255);    
+  text-decoration: none;
+
+}
+
+.flexMyFeatures{
+  display: flex;
+}
+
+
+
+.progressContainer {
+  --progressContainer: 0%;
+  position: relative;
+
+  width: 500px;
+  height: 50px;
+  margin: 10px auto;
+  border: 1px solid #fff;
+  padding: 12px 10px;
+  box-shadow: 0 0 10px #aaa;
+}
+
+.progressContainer .bar {
+  position: relative;
+  width: var(--progressContainer);
+  height: 100%;
+  background: linear-gradient(gold, #c85, gold);
+  background-repeat: repeat;
+  box-shadow: 0 0 10px 0px orange;
+  animation: 
+    shine 4s ease-in infinite,
+    end 1s ease-out 1;
+  transition: width 3s ease;
+}
+.flexBarreDeProgression{
+  position: relative;
+}
+.flexMyTrucs{
+  display: flex;
+}
+
+.AfficherEmployeTask{
+  display: none;
+}
+
+@property --progress {
+  syntax: "<length>";
+  initial-value: 50%;
+  inherits: true;
+}
+
+@keyframes shine {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 50px; }
+}
+
+@keyframes end {
+  0%, 100% { box-shadow: 0 0 10px 0px orange; }
+  50% { box-shadow: 0 0 15px 5px orange; }
+}
+
+.BarreDeProgressionTitle{
+  position: relative;
+left: 39%;
+color: white;
+max-width: fit-content;}
+
+.NomPrenomEmployeTitle{
+  font-size:25px;
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+}
+

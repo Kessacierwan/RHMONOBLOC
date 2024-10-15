@@ -1,0 +1,103 @@
+/* Global styles */
+body {
+    background-color: #484848;
+  }
+  
+  * {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  main {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #c9c7c7; /* white background */
+    border: 1px solid #dddddd; /* light gray border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+    border-radius: 5px;
+  }
+  
+  h2 {
+    color: #007732; /* green title */
+    margin-top: 0;
+    text-align: center;
+  }
+  
+
+input{
+    min-height: 30px;
+    border-radius: 5px;
+    text-align: center;
+}
+  
+
+  
+
+  
+
+  
+  .addEmployeDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #c9c7c7;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .addEmployeDiv div {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .addEmployeDiv label {
+    margin-bottom: 10px;
+  }
+  
+  .addEmployeDiv input, .addEmployeDiv select {
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  .addTaskTitle{
+    margin-top: 2%;
+  }
+
+#addTaskSendButton{
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    padding: 5px;
+    border: 5Px solid white;
+    margin-top: 10px;
+    margin-left: 40%;
+  }
+
+  .addEmployeeButton{
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    padding: 5px;
+    border: 5Px solid white;
+    margin-top: 10px;
+  }
+
+  .addEmployeeButton:hover{
+    background-color:#7bff9c ;
+    cursor: pointer;  
+
+  }
+
+  #addTaskSendButton:hover{
+      background-color:#7bff9c ;
+      cursor: pointer;
+  
+    }
+  
+

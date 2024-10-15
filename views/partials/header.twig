@@ -1,0 +1,31 @@
+{% block style %}
+<link rel="stylesheet" href="/assets/css/header.css">
+
+{% endblock %}
+
+{% block main %}
+
+<header class="divDuHeader">
+	<div class="divDuHeaderLogoTitle">
+	<img class="logoIMG" src="/assets/images/RHLOGO-removebg-preview-modified.png" alt="">
+	<h1 class="mainTitle">RH level <span class="spanMainTitle">UP</span></h1>
+
+</div>
+	<nav class="nav">
+		<ul>
+		<div class="divPourFlex">
+				<li>	
+					<a class="accueilLoginButton" href="/login">Connexion</a>
+				</li>
+				<li>
+					<a class="accueilRegisterButton" href="/register">Inscription</a>
+				</li>
+				<li>
+					<a href="/logout" id="deconnexionButton" class="buttonsClass">Deconnexion</a>
+				</li>
+				</div>
+		</ul>
+	</nav>
+
+</header>
+{% endblock %}

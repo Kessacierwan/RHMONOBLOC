@@ -1,0 +1,28 @@
+{% extends "../layouts/base.twig" %}
+{% block style %}
+<link rel="stylesheet" href="/assets/css/modifyEmploye.css">
+
+{% endblock %}
+
+{% block main %}
+  <h2>Modification employé :</h2>
+  <div class="modifyEmployeDiv">
+    <form action="/modifyEmploye/{{employe.id}}" method="POST">
+      <div>
+        <label for="nom" value="{{employe.nom}}">nom</label><br>
+        <input type="text"  value="{{employe.nom}}" name="nom" id="nom">
+      </div>
+      <div>
+        <label for="prenom">prenom</label><br>
+        <input type="text"  value="{{employe.prenom}}"name="prenom" id="prenom">
+      </div>
+      <div>
+        <label for="age">age</label><br>
+        <input type="text"  value="{{employe.age}}"name="age" id="age">
+      </div>
+      <div>
+        <button type="submit" class="envoyerButtonModifyEmploye">Envoyer</button>
+      </div>
+    </form>
+  </div>
+{% endblock %}
